@@ -1,9 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-    ./modules/zsh.nix
-  ];
+  # imports = [
+  #   ./modules/zsh.nix
+  # ];
 
   # Simply install just the packages
   environment.packages = with pkgs; [
