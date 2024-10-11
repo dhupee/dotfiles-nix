@@ -8,6 +8,7 @@
     nano
     man
     git
+    tldr
     yt-dlp
   ];
 
