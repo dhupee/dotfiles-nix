@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/zsh.nix
+  ];
+
   # Simply install just the packages
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
@@ -15,6 +19,16 @@
     vim
     yt-dlp
   ];
+
+  home-manager.config = {
+    home.file = {
+    # Symlink config files you want, example:
+    # ".screenrc".source = dotfiles/screenrc;
+
+    ".p10k.zsh".source = ./config/p10k.zsh;
+    ".aliases".source = ./aliases;
+    };
+  };
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
