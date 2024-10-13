@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+
+    environment.systemPackages = with pkgs; [
+
+      nerdfonts
+  ];
+
     programs.zsh = {
         enable = true;
         initExtra = ''
