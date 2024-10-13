@@ -33,6 +33,7 @@
     # Importing any modules from Home.nix goes through here
     imports = [ # has issue for being bit heavy, dont used it for now
      ./modules/zsh.nix
+     ./modules/helix.nix
     ];
 
     home.file = {
