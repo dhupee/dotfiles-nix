@@ -3,7 +3,7 @@
 {
 
     home.packages = with pkgs; [
-      nerdfonts
+      hack-font
     ];
 
     programs.zsh = {
