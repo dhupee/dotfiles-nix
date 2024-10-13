@@ -7,7 +7,7 @@
     # Make sure its CLI only
     # Check the modules to prevent duplicate installs
     bat
-    coreutils
+    # coreutils
     curl
     # corefonts
     fastfetch
@@ -53,6 +53,8 @@
     # to make sure I have access to phone's storage system
     termux-setup-storage.enable = true;
   };
+
+  user.shell = "${pkgs.zsh}/bin/zsh";
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
