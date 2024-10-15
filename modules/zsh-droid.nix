@@ -2,6 +2,7 @@
 
 {
 
+    # supporting packages needed for zsh
     home.packages = with pkgs; [
       hack-font
     ];
@@ -11,7 +12,7 @@
         initExtra = ''
             # source ~/.p10k.zsh
 
-            eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/base.json)"
+            eval "$(${pkgs.oh-my-posh} init zsh --config $HOME/.config/ohmyposh/base.json)"
 
             # Sourcing aliases
             if [ -d ~/.aliases/ ]; then
@@ -24,9 +25,6 @@
             else
                 echo "Aliases directory not found"
             fi
-
-
-            # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
             '';
         # initExtra = "source ~/.p10k.zsh";
