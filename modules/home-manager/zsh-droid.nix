@@ -10,7 +10,11 @@
     programs = {
       zsh = {
         enable = true;
+        enableCompletion = false;
         initExtra = ''
+
+          source ${pkgs.zsh-autocomplete}/zsh-autocomplete.plugin.zsh
+
           # Sourcing aliases
             if [ -d ~/.aliases/ ]; then
                 # Loop through all .sh files in the aliases directory and source them
@@ -43,6 +47,10 @@
                 "zoxide"
             ];
         };
+    };
+
+    syntaxHighlighting = {
+      enable = true;
     };
 
     oh-my-posh = {
