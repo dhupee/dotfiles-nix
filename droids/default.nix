@@ -16,6 +16,7 @@
     lazygit
     man
     nano
+    ncurses
     tldr
     tmate
     # toybox
