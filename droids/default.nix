@@ -11,7 +11,7 @@
     fastfetch
     fzf
     git
-    grep
+    gnugrep
     lazygit
     man
     nano
