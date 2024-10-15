@@ -47,11 +47,11 @@
                 "zoxide"
             ];
         };
+      syntaxHighlighting = {
+        enable = true;
+      };
     };
 
-    syntaxHighlighting = {
-      enable = true;
-    };
 
     oh-my-posh = {
       enable = true;
