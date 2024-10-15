@@ -1,6 +1,6 @@
-# Dhupee's Nix Dotfiles (EXPERIMENTAL)
+# Dhupee's Nix configurations Repository (EXPERIMENTAL)
 
-This is my dotfiles that I currently created on my Nix dotfiles, not only for NixOS, but also for Android, and maybe hopefully servers and Macs if i have money.
+This is my Nix configurations, which "will" be part of my dotfiles. These are configurations that I currently created on my Nix dotfiles, not only for NixOS, but also for Android, and maybe hopefully servers and Macs if i have money.
 
 It's still experimental, since I havent move to NixOS yet, but it should be good enough for now.
 
