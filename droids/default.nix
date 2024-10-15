@@ -32,8 +32,8 @@
 
     # Importing any modules from Home.nix goes through here
     imports = [ # has issue for being bit heavy, dont used it for now
-      ../modules/zsh-droid.nix
-      ../modules/helix.nix
+      ../modules/home-manager/zsh-droid.nix
+      ../modules/home-manager/helix.nix
     ];
 
     home.file = {

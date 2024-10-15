@@ -7,14 +7,11 @@
       hack-font
     ];
 
-    programs.zsh = {
+    programs = {
+      zsh = {
         enable = true;
         initExtra = ''
-            # source ~/.p10k.zsh
-
-            eval "$(${pkgs.oh-my-posh} init zsh --config $HOME/.config/ohmyposh/base.json)"
-
-            # Sourcing aliases
+          # Sourcing aliases
             if [ -d ~/.aliases/ ]; then
                 # Loop through all .sh files in the aliases directory and source them
                 for file in ~/.aliases/*.sh; do
@@ -47,4 +44,12 @@
             ];
         };
     };
+
+    oh-my-posh = {
+      enable = true;
+      package = pkgs.oh-my-posh;
+      enableZshIntegration = true;
+      settings = $XDG_CONFIG_HOME/oh-my-posh/base.json
+    };
+  };
 }
