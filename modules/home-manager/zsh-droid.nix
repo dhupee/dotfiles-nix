@@ -13,7 +13,7 @@
         enableCompletion = false;
         initExtra = ''
 
-          source ${pkgs.zsh-autocomplete}/zsh-autocomplete.plugin.zsh
+          source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
           # Sourcing aliases
             if [ -d ~/.aliases/ ]; then
