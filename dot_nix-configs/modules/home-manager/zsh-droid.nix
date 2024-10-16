@@ -49,12 +49,40 @@
       };
     };
 
-    # use oh-my-posh instead for the prompt
-    oh-my-posh = {
+    # # use oh-my-posh instead for the prompt
+    # oh-my-posh = {
+    #   enable = true;
+    #   package = pkgs.oh-my-posh;
+    #   enableZshIntegration = true;
+    #   useTheme = "onehalf.minimal"; # minimal theme dont need nerd font
+    # };
+
+    programs.starship = {
       enable = true;
-      package = pkgs.oh-my-posh;
+      enableTransience = true;
       enableZshIntegration = true;
-      useTheme = "onehalf.minimal"; # minimal theme dont need nerd font
+      settings = {
+        add_newline = false;
+
+        battery = {
+          full_symbol = "• ";
+          charging_symbol = "⇡ ";
+          discharging_symbol = "⇣ ";
+          unknown_symbol = "❓ ";
+          empty_symbol = "❗ ";
+        };
+
+        nodejs = {
+          symbol = "[⬢](bold green) ";
+        };
+
+        # character = {
+        #   success_symbol = "[➜](bold green)";
+        #   error_symbol = "[➜](bold red)";
+        # };
+
+        # package.disabled = true;
+      };
     };
   };
 }
