@@ -6,7 +6,7 @@
         enable = true;
         enableCompletion = false; # make sure it uses the zsh-autocomplete instead
         syntaxHighlighting.enable = true;
-        autosuggestion.enable = true;
+        historySubstringSearch.enable = true;
         initExtra = ''
 
           source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
