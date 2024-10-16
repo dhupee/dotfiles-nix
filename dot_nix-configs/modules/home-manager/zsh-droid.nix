@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    # supporting packages needed for zsh
-    # home.packages = with pkgs; [
-    #   hack-font
-    # ];
-
     programs = {
       zsh = {
         enable = true;
@@ -47,23 +42,16 @@
       syntaxHighlighting = {
         enable = true;
       };
+      autosuggestions = {
+        enable = true;
+      };
     };
-
-    # # use oh-my-posh instead for the prompt
-    # oh-my-posh = {
-    #   enable = true;
-    #   package = pkgs.oh-my-posh;
-    #   enableZshIntegration = true;
-    #   useTheme = "onehalf.minimal"; # minimal theme dont need nerd font
-    # };
 
     starship = {
       enable = true;
-      enableTransience = true;
       enableZshIntegration = true;
       settings = {
         add_newline = false;
-
         battery = {
           full_symbol = "• ";
           charging_symbol = "⇡ ";
@@ -71,17 +59,9 @@
           unknown_symbol = "❓ ";
           empty_symbol = "❗ ";
         };
-
         nodejs = {
           symbol = "[⬢](bold green) ";
         };
-
-        # character = {
-        #   success_symbol = "[➜](bold green)";
-        #   error_symbol = "[➜](bold red)";
-        # };
-
-        # package.disabled = true;
       };
     };
   };
