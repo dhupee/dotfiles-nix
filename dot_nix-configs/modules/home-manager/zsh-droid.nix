@@ -57,7 +57,7 @@
     #   useTheme = "onehalf.minimal"; # minimal theme dont need nerd font
     # };
 
-    programs.starship = {
+    starship = {
       enable = true;
       enableTransience = true;
       enableZshIntegration = true;
