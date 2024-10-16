@@ -21,7 +21,7 @@ TBA
 This is how I structure my dotfiles currently, it might will have few directories, maybe regarding theming, users, or something else in the future.
 
 ```txt
-.
+dot_nix-configs
 ├── aliases                 # Bunch of my Aliases
 ├── config                  # Non-nix configuration files
 │   ├── alacritty
