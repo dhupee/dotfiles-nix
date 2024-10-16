@@ -5,6 +5,8 @@
       zsh = {
         enable = true;
         enableCompletion = false; # make sure it uses the zsh-autocomplete instead
+        syntaxHighlighting.enable = true;
+        autosuggestion.enable = true;
         initExtra = ''
 
           source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -39,10 +41,6 @@
                 "zoxide"
             ];
         };
-      syntaxHighlighting = {
-        enable = true;
-      };
-      autosuggestion.enable = true;
     };
 
     starship = {
