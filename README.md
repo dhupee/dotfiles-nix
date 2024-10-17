@@ -4,6 +4,8 @@ This is my Nix configurations, which "will" be part of my dotfiles. These are co
 
 It's still experimental, since I havent move to NixOS yet, but it should be good enough for now.
 
+I use combination of chezmoi for dealing with sensitive files that need to be kept secret, and Home-manager for managing my home configuration.
+
 <!--toc:start-->
 
 - [Dhupee's Nix Dotfiles (EXPERIMENTAL)](#dhupees-nix-dotfiles-experimental)
@@ -18,10 +20,10 @@ TBA
 
 ## File Structure
 
-This is how I structure my dotfiles currently, it might will have few directories, maybe regarding theming, users, or something else in the future.
+This is how I structure my nix-configs currently, it might will have few more directories, maybe regarding theming, users, or something else in the future.
 
 ```txt
-dot_nix-configs
+.nix-configs
 ├── aliases                 # Bunch of my Aliases
 ├── config                  # Non-nix configuration files
 │   ├── alacritty
@@ -49,4 +51,4 @@ TBA
 - [ ] Theming related, KDE, Gnome, Hyprland whatever i can just change since its Nix
 - [ ] Make a command and control like for managing nix, built in go, name Yuki
 - [ ] Either specific nix for centralized configuration, or maybe on the flake
-- [ ] Utilizing rootless Nix, based on this [article](https://zameermanji.com/blog/2023/3/26/using-nix-without-root/)
+- [x] Utilizing rootless Nix
