@@ -57,8 +57,10 @@
     homeConfigurations = {
       dhupee = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        inherit pkgs-unstable;
         modules = [ ./home/dhupee.nix ];
+        extraSpecialArgs = {
+          inherit pkgs-unstable;
+        };
       };
     };
   };
