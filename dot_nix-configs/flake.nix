@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
@@ -19,6 +20,7 @@
     let
       system = "x86_64-linux"; # Adjust this if you are using a different architecture
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       lib = nixpkgs.lib;
     in {
 
@@ -26,6 +28,7 @@
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
         pkgs = import nixpkgs { system = "aarch64-linux"; };
+        pkgs-unstable = import nixpkgs-unstable { system = "aarch64-linux"; };
         modules = [ ./droids/default.nix ];
       };
     };
@@ -35,10 +38,16 @@
       nitro = lib.nixosSystem {
         inherit system;
         modules = [ ./desktop/nitro/configuration.nix ];
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
       };
       virts = lib.nixosSystem {
         inherit system;
         modules = [ ./desktop/virts/configuration.nix ];
+        specialArgs = {
+          inherit pkgs-unstable;
+          };
       };
     };
 
@@ -46,6 +55,7 @@
     homeConfigurations = {
       dhupee = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        inherit pkgs-unstable;
         modules = [ ./home/dhupee.nix ];
       };
     };
