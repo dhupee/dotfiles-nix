@@ -28,8 +28,10 @@
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
         pkgs = import nixpkgs { system = "aarch64-linux"; };
-        pkgs-unstable = import nixpkgs-unstable { system = "aarch64-linux"; };
         modules = [ ./droids/default.nix ];
+        specialArgs = {
+          pkgs-unstable = import nixpkgs-unstable { system = "aarch64-linux"; };
+        };
       };
     };
 
