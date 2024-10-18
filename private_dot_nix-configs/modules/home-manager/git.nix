@@ -5,6 +5,8 @@
   # so use traditional .gitconfig instead
   programs.git = {
     enable = true;
+    userEmail = "narutohaj00@gmail.com";
+    userName = "Daffa Haj Tsaqif";
     lfs = {
       enable = true;
     };
