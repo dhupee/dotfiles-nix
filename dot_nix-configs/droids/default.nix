@@ -50,6 +50,7 @@
     ".config/helix".source = ../config/helix;
     ".aliases".source = ../aliases;
     ".tmate.conf".source = ../config/tmate.conf;
+    ".gitconfig".source = ../config/gitconfig;
     };
   };
 
